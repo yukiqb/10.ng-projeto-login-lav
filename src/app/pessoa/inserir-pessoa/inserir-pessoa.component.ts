@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { Pessoa } from 'src/app/shared';
+import { Pessoa, Usuario } from 'src/app/shared';
 import { PessoaService } from '../services';
 
 @Component({
@@ -13,6 +13,7 @@ import { PessoaService } from '../services';
 export class InserirPessoaComponent implements OnInit {
   @ViewChild('formPessoa') formPessoa!: NgForm;
   pessoa!: Pessoa;
+  loginService: any;
 
   constructor(
     private pessoaService: PessoaService,
@@ -28,4 +29,5 @@ export class InserirPessoaComponent implements OnInit {
       this.router.navigate(["/pessoas"]);
     }
   }
+
 }
