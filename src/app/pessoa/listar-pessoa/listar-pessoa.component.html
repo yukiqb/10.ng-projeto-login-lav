@@ -7,13 +7,6 @@
     <tbody>
         <tr>
 
-            <!-- <th> Id
-                <button type="button" class="btn btn-link" (click)="ordenarPorId()">
-                    <i class="fa"
-                        [ngClass]="{'fa-sort-numeric-up': ordenacaoCrescente, 'fa-sort-numeric-down': !ordenacaoCrescente}"></i>
-                </button>
-            </th> -->
-
             <th> Nome
                 <button type="button" class="btn btn-link" (click)="ordenarPessoa()">
                     <i class="fa"
@@ -21,21 +14,7 @@
                 </button>
             </th>
 
-            <th> Idade
-                <button type="button" class="btn btn-link" (click)="ordenarPorIdade()">
-                    <i class="fa"
-                        [ngClass]="{'fa-sort-numeric-up': ordenacaoCrescente, 'fa-sort-numeric-down': !ordenacaoCrescente}"></i>
-                </button>
-            </th>
-
-            <th> Data de Nascimento
-                <!-- <button type="button" class="btn btn-link" (click)="ordenarPorDataNascimento()">
-                    <i class="fa"
-                        [ngClass]="{'fa-sort-numeric-up': ordenacaoCrescente, 'fa-sort-numeric-down': !ordenacaoCrescente}"></i>
-                </button> -->
-            </th>
-
-            <th>Motorista</th>
+            <th>Data de Nascimento</th>
 
             <th class="text-center">
                 <a [routerLink]="['/pessoas/novo']" href="#" title="Novo" alt="Novo" class="btn btn-xs btn-success">
@@ -44,11 +23,8 @@
             </th>
         </tr>
         <tr *ngFor="let pessoa of pessoas">
-            <!-- <td> {{pessoa.id}} </td> -->
             <td> {{pessoa.nome | caixaAlta}} </td>
-            <td> {{pessoa.idade}} </td>
             <td> {{pessoa.dataNascimento! | mask: 'd0/M0/0000' | uppercase}} </td>
-            <td> {{pessoa.motorista! ? pessoa.motorista : "Não" }} </td>
             <td class="text-center" style="width: 300px">
                 <button type="button" class="btn btn-outline-secondary" (click)="abrirModalPessoa(pessoa)">
                     <i class="fa fa-eye" aria-hidden="true"></i> Ver

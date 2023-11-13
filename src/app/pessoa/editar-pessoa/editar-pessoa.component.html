@@ -20,18 +20,6 @@
             </div>
         </div>
 
-        <label for="idade">Idade:</label>
-        <input type="text" class="form-control" id="idade" name="idade" [(ngModel)]="pessoa.idade" #idade="ngModel"
-            meuNumerico minimoValidatorParametro [valorMinimo]="'16'" required>
-        <div *ngIf="idade.errors && (idade.dirty || idade.touched)" class="alert alert-danger">
-            <div [hidden]="!idade.errors['required']">
-                Digite a idade da pessoa.
-            </div>
-            <div [hidden]="!idade.errors['minimo']">
-                Idade deve ser maior ou igual a 16
-            </div>
-        </div>
-
         <div class="form-group">
             <label for="data">Data Nascimento:</label>
             <input type="text" class="form-control" id="data" name="data" [(ngModel)]="pessoa.dataNascimento"
@@ -42,18 +30,6 @@
                     Digite a data de nascimento da pessoa.
                 </div>
             </div>
-        </div>
-
-        <div class="form-group">
-            <label for="motorista">Cart. Motorista:</label>
-            <input type="radio" class="form-check-input" id="motorista1" name="motorista" [(ngModel)]="pessoa.motorista"
-                #motorista1="ngModel" value="Não"> Não <br />
-            <input type="radio" class="form-check-input" id="motorista2" name="motorista" [(ngModel)]="pessoa.motorista"
-                #motorista2="ngModel" value="A"> A <br />
-            <input type="radio" class="form-check-input" id="motorista3" name="motorista" [(ngModel)]="pessoa.motorista"
-                #motorista3="ngModel" value="B"> B <br />
-            <input type="radio" class="form-check-input" id="motorista4" name="motorista" [(ngModel)]="pessoa.motorista"
-                #motorista4="ngModel" value="AB"> AB <br />
         </div>
 
         <div class="form-group">

@@ -68,20 +68,6 @@ export class ListarPessoaComponent implements OnInit {
     });
     this.ordenacaoCrescente = !this.ordenacaoCrescente;
   }
-  
-  ordenarPorIdade(): void {
-    this.pessoas.sort((a, b) => {
-      const idadeA = a.idade || 0;
-      const idadeB = b.idade || 0;
-  
-      if (this.ordenacaoCrescente) {
-        return idadeA - idadeB;
-      } else {
-        return idadeB - idadeA;
-      }
-    });
-    this.ordenacaoCrescente = !this.ordenacaoCrescente;
-  }
 
   ordenarPorDataNascimento(): void {
     this.pessoas.sort((a, b) => {
